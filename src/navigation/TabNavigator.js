@@ -19,46 +19,56 @@ const tabBarOptions = {
   labelStyle: {
     color: colors.lightblue,
   },
-  activeTintColor: colors.white,
-  inactiveTintColor: colors.white,
-  activeBackgroundColor: colors.white,
-  inactiveBackgroundColor: colors.white,
+  // activeTintColor: colors.white,
+  // inactiveTintColor: colors.white,
+  // activeBackgroundColor: colors.white,
+  // inactiveBackgroundColor: colors.white,
 }
 
 const TabNavigator = createBottomTabNavigator(
   {
-    MyProfile: {
-      screen: Home,
-      navigationOptions: {
-        title: 'Perfil',
-        tabBarOptions,
-        tabBarIcon: () => (
-          <MaterialCommunityIcons
-            name="account"
-            size={25}
-            color={colors.lightblue}
-          />
-        ),
-        keyboardHidesTabBar: false,
-      },
-    },
-    Hours: {
-      screen: Home,
-      navigationOptions: {
-        title: 'Ponto',
-        tabBarOptions,
-        tabBarIcon: () => (
-          <MaterialIcons name="timer" size={25} color={colors.lightblue} />
-        ),
-        keyboardHidesTabBar: false,
-      },
-    },
+    // MyProfile: {
+    //   screen: Home,
+    //   navigationOptions: {
+    //     title: 'Perfil',
+    //     tabBarOptions,
+    //     tabBarIcon: () => (
+    //       <MaterialCommunityIcons
+    //         name="account"
+    //         size={29}
+    //         color={colors.lightblue}
+    //       />
+    //     ),
+    //     keyboardHidesTabBar: false,
+    //   },
+    // },
+    // Hours: {
+    //   screen: Home,
+    //   navigationOptions: {
+    //     title: 'Ponto',
+    //     tabBarOptions,
+    //     tabBarIcon: () => (
+    //       <MaterialIcons name="timer" size={29} color={colors.lightblue} />
+    //     ),
+    //     keyboardHidesTabBar: false,
+    //   },
+    // },
     Home: {
       screen: Home,
       navigationOptions: {
+        tabBarIcon: () => (
+          <FontAwesome name="home" size={29} color={colors.lightblue} />
+        ),
+        keyboardHidesTabBar: false,
+      },
+    },
+    Projects: {
+      screen: Home,
+      navigationOptions: {
+        title: 'Projetos',
         tabBarOptions,
         tabBarIcon: () => (
-          <FontAwesome name="home" size={25} color={colors.lightblue} />
+          <MaterialIcons name="work" size={29} color={colors.lightblue} />
         ),
         keyboardHidesTabBar: false,
       },
@@ -69,22 +79,22 @@ const TabNavigator = createBottomTabNavigator(
         title: 'Atividades',
         tabBarOptions,
         tabBarIcon: () => (
-          <FontAwesome5 name="tasks" size={25} color={colors.lightblue} />
+          <FontAwesome5 name="tasks" size={29} color={colors.lightblue} />
         ),
         keyboardHidesTabBar: false,
       },
     },
-    Calendar: {
-      screen: Home,
-      navigationOptions: {
-        title: 'Calendário',
-        tabBarOptions,
-        tabBarIcon: () => (
-          <Octicons name="calendar" size={25} color={colors.lightblue} />
-        ),
-        keyboardHidesTabBar: false,
-      },
-    },
+    // Calendar: {
+    //   screen: Home,
+    //   navigationOptions: {
+    //     title: 'Calendário',
+    //     tabBarOptions,
+    //     tabBarIcon: () => (
+    //       <Octicons name="calendar" size={29} color={colors.lightblue} />
+    //     ),
+    //     keyboardHidesTabBar: false,
+    //   },
+    // },
   },
   {
     initialRouteName,

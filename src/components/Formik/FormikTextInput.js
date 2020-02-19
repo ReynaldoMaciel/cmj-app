@@ -45,6 +45,8 @@ const FormikTextInput = ({
             messageErrorStyle || {
               fontSize: 12,
               color: 'red',
+              fontWeight: 'bold',
+              paddingVertical: 5,
             }
           }
         >

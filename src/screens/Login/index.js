@@ -13,6 +13,7 @@ import {
   Text,
   TouchableOpacity,
   View,
+  ImageBackground,
 } from 'react-native'
 import LinearGradient from 'react-native-linear-gradient'
 import { connect } from 'react-redux'
@@ -42,9 +43,17 @@ const Login = ({ login, updateLogin, navigation }) => {
     }
   }
   return (
-    <LinearGradient
-      colors={[colors.white, colors.lightblue]}
-      style={styles.container}
+    <ImageBackground
+      source={{
+        uri: 'http://www.centromedicojardins.com.br/images/bg/bg_03.png',
+      }}
+      resizeMode="cover"
+      style={{
+        width: '100%',
+        height: '100%',
+        backgroundColor: '#0b0d5d',
+      }}
+      imageStyle={{ opacity: 0.2 }}
     >
       <SafeAreaView style={styles.containerSafeArea}>
         <ModalError
@@ -67,8 +76,8 @@ const Login = ({ login, updateLogin, navigation }) => {
           style={styles.containerForm}
         >
           <Formik
-            initialValues={{ email: 'r@r.com', senha: '123qwe' }}
-            // initialValues={{ email: '', senha: '' }}
+            // initialValues={{ email: 'r@r.com', senha: '123qwe' }}
+            initialValues={{ email: '', senha: '' }}
             onSubmit={requestLogin}
             validationSchema={LoginSchema}
           >
@@ -83,6 +92,7 @@ const Login = ({ login, updateLogin, navigation }) => {
                   {...formikProps}
                   style={styles.emailField}
                   errorStyle={{ borderBottomColor: '#FF4140' }}
+                  placeholder="Informe o seu email"
                 />
                 <Text style={styles.label}>Senha</Text>
                 <FormikTextInput
@@ -93,6 +103,7 @@ const Login = ({ login, updateLogin, navigation }) => {
                   {...formikProps}
                   style={styles.passwordField}
                   errorStyle={{ borderBottomColor: '#FF4140' }}
+                  placeholder="Informe a sua senha"
                 />
                 <TouchableOpacity
                   testID="loginButton"
@@ -114,7 +125,7 @@ const Login = ({ login, updateLogin, navigation }) => {
         </KeyboardAvoidingView>
         <View style={styles.containerButtons}></View>
       </SafeAreaView>
-    </LinearGradient>
+    </ImageBackground>
   )
 }
 

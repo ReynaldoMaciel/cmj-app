@@ -6,6 +6,11 @@ export default StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
   },
+  title: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginVertical: 30,
+  },
   containerSafeArea: {
     flex: 1,
   },
@@ -15,7 +20,7 @@ export default StyleSheet.create({
   },
   logo: {
     width: '75%',
-    height: 200,
+    height: 100,
   },
   containerForm: {
     flex: 4,
@@ -26,25 +31,15 @@ export default StyleSheet.create({
     fontWeight: 'bold',
     marginTop: 20,
   },
-  emailField: {
+  field: {
     backgroundColor: colors.white,
     opacity: 0.6,
     fontSize: 20,
-    padding: 7,
+    padding: 10,
     marginTop: 3,
-    // borderRadius: 4,
-    borderBottomColor: 'gray',
-    borderBottomWidth: 4,
-  },
-  passwordField: {
-    backgroundColor: colors.white,
-    opacity: 0.6,
-    fontSize: 20,
-    padding: 7,
-    marginTop: 3,
-    // borderRadius: 4,
-    borderBottomColor: 'gray',
-    borderBottomWidth: 4,
+    borderRadius: 7,
+    // borderBottomColor: 'gray',
+    // borderBottomWidth: 4,
   },
   containerButtons: {
     flex: 2,
@@ -64,7 +59,7 @@ export default StyleSheet.create({
   registerButtonText: {
     textAlign: 'center',
     textTransform: 'uppercase',
-    fontSize: 16,
+    fontSize: 18,
     color: colors.white,
     fontWeight: 'bold',
   },
@@ -72,15 +67,16 @@ export default StyleSheet.create({
     padding: 10,
     textAlign: 'center',
     textTransform: 'uppercase',
-    fontSize: 16,
+    fontSize: 18,
     color: colors.white,
     fontWeight: 'bold',
     marginBottom: 15,
   },
   registerButton: {
-    backgroundColor: colors.gray,
+    backgroundColor: colors.lightblue,
     padding: 10,
-    marginTop: 15,
+    marginTop: 30,
     marginBottom: 20,
+    borderRadius: 7,
   },
 })

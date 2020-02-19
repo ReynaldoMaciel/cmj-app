@@ -26,6 +26,7 @@ import date from '../../utils/masks/date'
 
 const Login = ({ updateLogin }) => {
   const [showModalError, setShowModalError] = useState(false)
+
   const LoginSchema = Yup.object().shape({
     email: Yup.string()
       .email()
@@ -56,11 +57,7 @@ const Login = ({ updateLogin }) => {
               onPressClose={() => setShowModalError(false)}
             />
             <View style={styles.containerLogo}>
-              <Image
-                source={images.logo}
-                style={styles.logo}
-                resizeMode="contain"
-              />
+              <Text style={styles.title}>Registrar</Text>
             </View>
             <View style={styles.containerForm}>
               <Formik
@@ -74,26 +71,29 @@ const Login = ({ updateLogin }) => {
                     <FormikTextInput
                       name="email"
                       keyboardType="email-address"
+                      placeholder="Informe seu email"
                       {...formikProps}
-                      style={styles.emailField}
+                      style={styles.field}
                       errorStyle={{ borderBottomColor: '#FF4140' }}
                     />
                     <Text style={styles.label}>CPF</Text>
                     <FormikTextInput
                       name="cpf"
                       keyboardType="numeric"
+                      placeholder="Informe seu CPF"
                       {...formikProps}
                       mask={cpf}
-                      style={styles.emailField}
+                      style={styles.field}
                       errorStyle={{ borderBottomColor: '#FF4140' }}
                     />
                     <Text style={styles.label}>Telefone</Text>
                     <FormikTextInput
                       name="telefone"
                       keyboardType="numeric"
+                      placeholder="Informe seu telefone"
                       {...formikProps}
                       mask={telefone}
-                      style={styles.emailField}
+                      style={styles.field}
                       errorStyle={{ borderBottomColor: '#FF4140' }}
                     />
                     <Text style={styles.label}>Data de nascimento</Text>
@@ -102,23 +102,26 @@ const Login = ({ updateLogin }) => {
                       keyboardType="numeric"
                       {...formikProps}
                       mask={date}
-                      style={styles.emailField}
+                      placeholder="Informe sua data de nascimento"
+                      style={styles.field}
                       errorStyle={{ borderBottomColor: '#FF4140' }}
                     />
                     <Text style={styles.label}>Senha</Text>
                     <FormikTextInput
                       name="senha"
+                      placeholder="Informe sua senha"
                       secureTextEntry
                       {...formikProps}
-                      style={styles.passwordField}
+                      style={styles.field}
                       errorStyle={{ borderBottomColor: '#FF4140' }}
                     />
                     <Text style={styles.label}>Confirmação</Text>
                     <FormikTextInput
                       name="confirmacao"
+                      placeholder="Confirme sua senha"
                       secureTextEntry
                       {...formikProps}
-                      style={styles.passwordField}
+                      style={styles.field}
                       errorStyle={{ borderBottomColor: '#FF4140' }}
                     />
                     <TouchableOpacity

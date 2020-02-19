@@ -14,7 +14,8 @@ const createRootContainer = logged => {
         Register,
       },
       {
-        initialRouteName: logged ? 'Home' : 'Login',
+        initialRouteName: 'Login',
+        // initialRouteName: 'Home',
       }
     )
   )
@@ -24,7 +25,7 @@ export default () => {
   const [logged, setLogged] = useState(false)
 
   useEffect(() => {
-    setLogged(false)
+    setLogged(true)
   }, [])
 
   const AppNavigationContainer = createRootContainer(logged)
